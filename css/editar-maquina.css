@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* ===== RESET E BASE ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #182124; /* fundo escuro */
+  color: #1b2a2f;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR (Conforme solicitado) ===== */
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 10px 5%;
+    position: fixed; /* Fixa no topo como no painel adm */
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+.Navbar .Menu {
+    display: flex;
+    gap: 15px;
+}
+
+.Navbar .Menu a {
+    color: #1b2a2f;
+    text-decoration: none;
+    font-size: 16px; /* Ajustado para harmonia visual */
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.Navbar .Menu a:hover {
+    color: #00C2A8;
+}
+
+/* ===== LAYOUT DO CONTEÚDO ===== */
+.content {
+    flex: 1;
+    padding: 120px 5% 40px; /* Padding superior compensa a Navbar fixa */
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== CARD DO FORMULÁRIO (Igual à imagem 1) ===== */
+.form-group {
+
+  max-width: 900px;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  background-color: #ffffff; /* mantém o card branco */
+}
+
+/* Cabeçalho interno do Card */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.header h1 {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1b2a2f;
+}
+
+.maquina-id {
+    color: #788485;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* ===== GRID DE ALINHAMENTO ===== */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Divide em 2 colunas iguais */
+    gap: 25px 40px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Campo de sensor ou observações ocupando a linha toda */
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #4b4e4e;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+input, select {
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 15px;
+    color: #1b2a2f;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #00C2A8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 194, 168, 0.1);
+}
+
+/* ===== ÁREA DE BOTÕES ===== */
+.botoes-acao {
+    display: flex;
+    justify-content: space-between; /* Voltar na ponta esquerda, Salvar na direita */
+    align-items: center;
+    margin-top: 40px;
+}
+
+.btn-voltar {
+    background-color: #00C2A8;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-salvar {
+    background-color: #284f69;
+    color: white;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+
+    .botoes-acao {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    .btn-voltar, .btn-salvar {
+        width: 100%;
+        text-align: center;
+    }
+}

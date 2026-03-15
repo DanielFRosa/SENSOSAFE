@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-image: url('../img/fundo-login.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* ÁREA DA IMAGEM */
+.imagem {
+  flex: 60%;
+}
+
+/* ÁREA DO FORM */
+.login {
+  flex: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 55px;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.form {
+  width: 420px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* FORMULÁRIO NORMAL */
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* BOTÕES — CORES ORIGINAIS */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.cancel {
+  background-color: #6c2f28;
+  color: white;
+}
+
+.btn.submit {
+  background-color: #163d57;
+  color: white;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+    background: none;
+  }
+
+  .imagem {
+    display: none;
+  }
+
+  .login {
+    flex: 1;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+}
+
+
+.senha-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.senha-box input {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+}
+
+.toggle-senha {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #c9c9c9; 
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.toggle-senha:hover {
+  color: #a8a8a8;
+}

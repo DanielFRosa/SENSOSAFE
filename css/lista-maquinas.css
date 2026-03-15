@@ -1,0 +1,228 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== FUNDO ===== */
+body {
+    color: #253439;
+    background: #253439;
+}
+
+/* ===== NAVBAR ===== */
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 10px 5%;
+
+    top: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.Navbar .Menu a {
+    color: #1b2a2f;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.Navbar .Menu a:hover {
+    color: #00C2A8;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    padding: 30px 50px;
+}
+
+.content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ===== CABEÇALHO ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 22px;
+    color: #314850;
+}
+
+.btn-novo {
+    background: #00C2A8;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-novo:hover {
+    background: #00a893;
+}
+
+/* ===== MENSAGENS ===== */
+.mensagem-sucesso {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.mensagem-erro {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* ===== BUSCA ===== */
+.busca-container {
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.busca-container input {
+    width: 100%;
+    padding: 10px 38px 10px 12px;
+    border-radius: 6px;
+    border: 2px solid #253439;
+    outline: none;
+    transition: 0.2s;
+}
+
+.busca-container input:focus {
+    border-color: #00C2A8;
+    box-shadow: 0 0 5px rgba(0,194,168,0.4);
+}
+
+.busca-container i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #253439;
+}
+
+/* ===== TABELA ===== */
+.tabela-container {
+    overflow-x: auto;
+}
+
+.tabela-maquinas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-maquinas thead {
+    background: #41616d;
+    color: #fff;
+}
+
+.tabela-maquinas th,
+.tabela-maquinas td {
+    padding: 12px 14px;
+    text-align: left;
+}
+
+.tabela-maquinas tbody tr {
+    border-bottom: 1px solid #e5e5e5;
+    transition: 0.2s;
+}
+
+.tabela-maquinas tbody tr:hover {
+    background: #f1f9f8;
+}
+
+/* ===== SENSOR ===== */
+.sensor-info {
+    color: #00a893;
+    font-weight: 500;
+}
+
+.sem-sensor {
+    color: #999;
+    font-style: italic;
+}
+
+/* ===== BOTÕES ===== */
+.acoes {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-editar,
+.btn-visualizar,
+.btn-deletar {
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-editar { background: #3498db; }
+.btn-editar:hover { background: #2c80b4; }
+
+.btn-visualizar { background: #6c757d; }
+.btn-visualizar:hover { background: #545b62; }
+
+.btn-deletar { background: #dc3545; }
+.btn-deletar:hover { background: #b02a37; }
+
+/* ===== RESUMO ===== */
+.resumo {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== SEM DADOS ===== */
+.sem-dados {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+}
+
+.btn-cadastrar {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 15px;
+    background: #00C2A8;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .container { padding: 20px; }
+    .header { flex-direction: column; gap: 10px; align-items: flex-start; }
+    .acoes { flex-direction: column; }
+}

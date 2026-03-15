@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+/* ===== DESKTOP ===== */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* IMAGEM ESQUERDA */
+.imagem {
+  flex: 0 0 60%;
+  background-image: url('../img/fundo-login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+}
+
+/* FORMULÁRIO DIREITA */
+.login {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.logo img {
+  width: 55px;
+  display: block;
+  margin: 0 auto 5px;
+}
+.form {
+  width: 100%;
+  max-width: 480px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* MENSAGENS */
+.mensagem {
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.mensagem.erro {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.mensagem.sucesso {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* BOTÕES */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn.cancel {
+  background: #6c2f28;
+  color: white;
+}
+
+.btn.cancel:hover {
+  background: #c0392b;
+}
+
+.btn.submit {
+  background: #163d57;
+  color: white;
+}
+
+.btn.submit:hover {
+  background: #1e4d6e;
+}
+
+/* ===== RESPONSIVO (IGUAL LOGIN) ===== */
+
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .login {
+    order: 1;
+    width: 100%;
+    min-height: 70vh;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  .imagem {
+    order: 2;
+    width: 100%;
+    height: 30vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

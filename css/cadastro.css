@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  background-image: url('../img/fundo-login.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.imagem {
+  flex: 60%;
+}
+
+.login {
+  flex: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.logo img {
+  width: 55px;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.form {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #163d57;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn.cancel {
+  background-color: #6c2f28;
+  color: white;
+}
+
+.btn.cancel:hover {
+  background-color: #c0392b;
+}
+
+.btn.submit {
+  background-color: #163d57;
+  color: white;
+}
+
+.btn.submit:hover {
+  background-color: #1e4d6e;
+}
+
+#mensagem {
+  margin-top: 20px;
+  padding: 12px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+  opacity: 0;
+  transition: .3s;
+}
+
+#mensagem.ativa {
+  opacity: 1;
+}
+.mensagem-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+/* caso o msg() gere uma div interna */
+.mensagem-wrapper .erro,
+.mensagem-wrapper .sucesso {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+    background-image: none;
+    min-height: 100vh;
+  }
+
+  /* REMOVE A IMAGEM COMPLETAMENTE */
+  .imagem {
+    display: none;
+  }
+
+  /* FORMULÁRIO OCUPA A TELA TODA */
+  .login {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    width: 100%;
+    max-width: 420px;
+    padding: 25px 20px;
+  }
+}
+
+
+
+.senha-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.senha-box input {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.toggle-senha {
+  position: absolute;
+  right: 15px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #c9c9c9; 
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.toggle-senha:hover {
+  color: #a8a8a8;
+}

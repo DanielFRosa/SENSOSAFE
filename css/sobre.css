@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding-top: 120px;
+  background-color: #1b2c34;
+  color: white;
+}
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 10px 5%;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.Logo img {
+  display: block;
+}
+
+.Menu {
+  display: flex;
+  gap: 10px;
+}
+
+.Menu a {
+  color: #1b2a2f;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.Menu a:hover {
+  color: #00C2A8;
+}
+
+.h1background {
+  background: #1b2c34;
+  width: 100%;
+  height: 100px;
+  margin-top: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeUp 1s ease-in-out;
+}
+
+h1 {
+  font-size: 46px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px #00f7ff88;
+}
+
+
+
+.card-container,
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #0a0e1a;
+  border: 2px solid #00f7ff33;
+  border-radius: 16px;
+  padding: 25px;
+  width: 300px;
+  margin: 15px;
+  box-shadow: 0 8px 20px rgba(0, 247, 255, 0.1);
+  color: white;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  text-align: inherit;
+}
+
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 247, 255, 0.3);
+  background: #000000;
+}
+
+.card .icon {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #00f7ff;
+
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #c5e4f3;
+}
+
+
+
+vantagens-competitivas {
+
+  color: white;
+  margin: 2px 0 90px 0;
+  background-color: #52697964;
+  width: 1490px;
+  height: 100px;
+  border-radius: 5px;
+
+}
+
+.h3Vantagens {
+  text-align: center;
+  font-size: 46px;
+  justify-content: center;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px #00f7ff88;
+}
+
+.vantagens-container {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+  flex-wrap: wrap;
+  margin: 20px 40px;
+
+}
+
+.vantagem {
+  background-color: #2d3c46;
+  padding: 15px 25px;
+  border-radius: 16px;
+  width: 220px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid #00f7ff33;
+  margin: 15px;
+}
+
+.vantagem:hover {
+  background-color: #0f1c2c;
+}
+
+img {
+  width: 200px;
+}
+
+
+
+.descricao {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  color: white;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.descricao h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2d3c46;
+  border-left: 5px solid #2d3c46;
+  padding-left: 15px;
+}
+
+.descricao h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  color: #2d3c46;
+}
+
+.descricao p {
+  font-size: 17px;
+  margin-bottom: 18px;
+  text-align: justify;
+  color: rgb(29, 10, 10);
+}
+
+
+
+img {
+  width: 200px;
+}
+
+
+
+footer {
+
+  background-color: white;
+  height: 90px;
+  width: 100%;
+  position: absolute;
+  box-shadow: 2px 3px 10px black;
+  top: 1450px;
+
+}
+
+.rodape h3 {
+  color: #000000;
+  text-align: center;
+  display: inline-block;
+  margin-left: 150px;
+  font-size: 18px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.254);
+
+}
+
+/* ========== Animações ========== */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    color: #00f7ff;
+  }
+
+  50% {
+    transform: scale(1.2);
+    color: #00c3cc;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+[vw-access-button] {
+  top: 325px !important;
+  right: 10px !important;
+}
+
+[Vw-plugin-wrapper] {
+  top: 100px !important;
+}
+
+/* =====================
+   HAMBÚRGUER
+   ===================== */
+   .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #1b2a2f;
+    border-radius: 3px;
+  }
+  
+  /* =====================
+     RESPONSIVIDADE MOBILE
+     ===================== */
+  @media (max-width: 768px) {
+  
+    body {
+      padding-top: 100px;
+    }
+  
+    /* NAVBAR */
+    .Navbar {
+      justify-content: space-between;
+      padding: 15px;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .Menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      padding: 20px 0;
+      display: none;
+    }
+  
+    .Menu.active {
+      display: flex;
+    }
+  
+    .Menu a {
+      font-size: 16px;
+    }
+  
+    /* TÍTULO */
+    h1 {
+      font-size: 30px;
+    }
+  
+    .h1background {
+      height: auto;
+      padding: 20px;
+    }
+  
+    /* CARDS */
+    .card-container {
+      padding: 20px 10px;
+    }
+  
+    .card {
+      width: 100%;
+      max-width: 340px;
+    }
+  
+    /* VANTAGENS */
+    .vantagens-container {
+      margin: 10px;
+    }
+  
+    .vantagem {
+      width: 100%;
+      max-width: 320px;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    /* DESCRIÇÃO */
+    .descricao {
+      padding: 25px;
+      margin: 30px 15px;
+    }
+  
+    .descricao h2 {
+      font-size: 22px;
+    }
+  
+    .descricao h3 {
+      font-size: 18px;
+    }
+  
+    .descricao p {
+      font-size: 15px;
+    }
+  
+    /* VLibras */
+    [vw-access-button] {
+      top: auto !important;
+      bottom: 20px !important;
+      right: 20px !important;
+    }
+  }
+  
